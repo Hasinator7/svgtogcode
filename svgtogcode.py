@@ -1,7 +1,6 @@
 import os
 from svgpathtools import Path, Line, QuadraticBezier, CubicBezier, Arc
 from svgpathtools import svg2paths, wsvg
-import matplotlib.pyplot as plt
 import numpy as np
 
 HOME = "G28\n"
@@ -12,8 +11,6 @@ START_Y = 32
 WIDTH = 140 #mm
 
 paths,attributes=svg2paths("in.svg")
-polynoms = []
-print(len(paths))
 gcode = open("out.gcode","w")
 
 #Add boilerplate code
