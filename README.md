@@ -11,6 +11,7 @@ Not very polished right now, but functional.
 - In the script, change START_X and START_Y to where you want to the lower left corner to be
 - (All of these values should be read from your 3D-Printer or a control software)
 - In the script, set WIDTH to the width you want the final picture to be in mm. The picture will be scaled and aspect ratio will be conserved.
+-(Optional) Set FEEDRATE to your desired feedrate
 **There is no check to see if the picture will be too high after scaling!**
 - Run the script,but **only if you have changed Z_OFFSET, START_X, START_Y and WIDTH to appropriate values for your printer. Not doing so may damage your printer!**
 - It will output out.gcode, which is ready to run on your Printer
