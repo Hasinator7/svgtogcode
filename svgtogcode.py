@@ -5,6 +5,7 @@ import numpy as np
 
 HOME = "G28\n"
 UNITS_MILLIMETRES = "G21\n"
+FEEDRATE = 3000
 Z_OFFSET = 27.6
 START_X = 123
 START_Y = 32
@@ -16,6 +17,7 @@ gcode = open("out.gcode","w")
 #Add boilerplate code
 gcode.write(HOME)
 gcode.write(UNITS_MILLIMETRES)
+gcode.write("G1 F"+str(FEEDRATE)+"\n")
 gcode.write("G1 Z"+str(Z_OFFSET+5)+"\n")
 
 X = np.linspace(0,1,100)
